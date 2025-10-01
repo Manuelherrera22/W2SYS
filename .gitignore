@@ -1,0 +1,72 @@
+# Archivos y directorios que deben ser ignorados por Git
+
+# Dependencias
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de build
+.next/
+out/
+dist/
+build/
+
+# Variables de entorno
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+
+# Archivos temporales
+.tmp/
+temp/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de caché
+.cache/
+.parcel-cache/
+
+# Archivos de cobertura
+coverage/
+.nyc_output/
+
+# Archivos de TypeScript
+*.tsbuildinfo
+
+# Archivos de ESLint
+.eslintcache
+
+# Archivos de Prettier
+.prettierignore
+
+# Archivos de testing
+.jest/
+
+# Archivos de Vercel
+.vercel
+
+# Archivos de Netlify
+.netlify
+
+# Archivos de backup
+*.backup
+*.bak
+
+# Archivos de documentación temporal
+*.tmp
+*.temp

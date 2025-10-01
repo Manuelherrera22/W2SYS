@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+    --radius: 0.5rem;
+    
+    /* W2SYS Custom Colors */
+    --boxdark: 222.2 84% 4.9%;
+    --boxdark-2: 228 7% 13%;
+    --bodydark: 210 40% 98%;
+    --bodydark1: 215 16.3% 65.1%;
+    --bodydark2: 215 10% 50%;
+    --stroke: 215 10% 30%;
+    --strokedark: 215 10% 25%;
+    --graydark: 217.2 32.6% 17.5%;
+    --meta-4: 217.2 32.6% 20%;
+    --blueSecondary: 217.2 91.2% 59.8%;
+    --black-3: 0 0% 100%;
+    --navy-700: 222.2 47.4% 11.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .w-72\.5 {
+    width: 18.125rem;
+  }
+  .h-5\.5 {
+    height: 1.375rem;
+  }
+  .w-5\.5 {
+    width: 1.375rem;
+  }
+  .w-62\.5 {
+    width: 15.625rem;
+  }
+  .z-9999 {
+    z-index: 9999;
+  }
+  .z-999 {
+    z-index: 999;
+  }
+  .py-5\.5 {
+    padding-top: 1.375rem;
+    padding-bottom: 1.375rem;
+  }
+  .py-6\.5 {
+    padding-top: 1.625rem;
+    padding-bottom: 1.625rem;
+  }
+  .p-6\.5 {
+    padding: 1.625rem;
+  }
+  .py-7\.5 {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+  .text-title-md2 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+
+
