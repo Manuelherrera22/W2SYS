@@ -108,34 +108,24 @@ export class SerialValidator {
     }
   }
 
-  // Validar con API externa
+  // Validar con API externa (ahora usando validación estática)
   private async validateWithExternalAPI(serial: string): Promise<{
     isValid: boolean
     isFake: boolean
     details?: any
   }> {
     try {
-      // Integración con API externa (ejemplo: Chrono24, WatchBase, etc.)
-      // Por ahora, simulamos la validación
+      // Usar validación estática en lugar de API
+      const { validateSerial } = await import('./SerialValidatorStatic')
+      const result = validateSerial(serial)
       
-      // Simular llamada a API
-      const response = await fetch(`/api/validate-serial/${serial}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
-
-      if (response.ok) {
-        const data = await response.json()
-        return {
-          isValid: data.valid || false,
-          isFake: data.fake || false,
-          details: data
-        }
+      return {
+        isValid: result.isValid,
+        isFake: result.isFake,
+        details: result
       }
     } catch (error) {
-      console.log('External API not available, using local validation')
+      console.log('Static validation not available, using local validation')
     }
 
     // Fallback: validación local básica
